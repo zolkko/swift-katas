@@ -1,16 +1,12 @@
-import Foundation
-
-
 public func bubbleSort<T: Comparable>(_ input: [T]) -> [T] {
     if input.count <= 1 {
         return input
     }
-    
+
     var result = input
     var swapped = false
-    var n = result.count - 1
 
-    repeat {
+    for n in (1..<result.count).reversed() {
         swapped = false
         for i in 0..<n {
             if result[i] > result[i + 1] {
@@ -18,8 +14,10 @@ public func bubbleSort<T: Comparable>(_ input: [T]) -> [T] {
                 swapped = true
             }
         }
-        n -= 1
-    } while (swapped)
+        if !swapped {
+            break
+        }
+    }
 
     return result
 }
