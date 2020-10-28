@@ -13,7 +13,7 @@ class BubbleSortTests: XCTestCase {
     }
 
     func testEmptyArray() throws {
-        let result = bubbleSort([])
+        let result: [Int] = bubbleSort([])
         assert(result.count == 0)
     }
     

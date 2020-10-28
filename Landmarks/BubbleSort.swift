@@ -1,25 +1,25 @@
 import Foundation
 
 
-public func bubbleSort(_ value: [Int]) -> [Int] {
-    if value.count <= 1 {
-        return value
+public func bubbleSort<T: Comparable>(_ input: [T]) -> [T] {
+    if input.count <= 1 {
+        return input
     }
     
-    var input = value
+    var result = input
     var swapped = false
-    var n = input.count - 1
+    var n = result.count - 1
 
     repeat {
         swapped = false
         for i in 0..<n {
-            if input[i] > input[i + 1] {
-                (input[i], input[i + 1]) = (input[i + 1], input[i])
+            if result[i] > result[i + 1] {
+                (result[i], result[i + 1]) = (result[i + 1], result[i])
                 swapped = true
             }
         }
         n -= 1
     } while (swapped)
 
-    return input
+    return result
 }
