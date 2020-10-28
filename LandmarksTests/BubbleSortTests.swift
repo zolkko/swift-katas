@@ -33,8 +33,14 @@ class BubbleSortTests: XCTestCase {
     }
     
     func testSortArbitaryArray() throws {
-        let result = bubbleSort([1, 2, 5, 3, 4, 8, 7, 6])
-        assert(result == [1, 2, 3, 4, 5, 6, 7, 8])
+        let value = [1, 2, 5, 3, 4, 8, 7, 6]
+        let expected = [1, 2, 3, 4, 5, 6, 7, 8]
+
+        let result = bubbleSort(value)
+        assert(result == expected)
+        
+        let reversedResult = bubbleSort(value.reversed())
+        assert(reversedResult == expected)
     }
 
     func testPerformanceExample() throws {
