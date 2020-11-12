@@ -1,5 +1,4 @@
 import XCTest
-@testable import swift_katas
 
 
 class BubbleSortTests: XCTestCase {
