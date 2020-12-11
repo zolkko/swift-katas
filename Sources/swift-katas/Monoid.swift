@@ -18,8 +18,3 @@ extension String: Monoid {
         return self + other
     }
 }
-
-func sample() {
-    /// Usage example
-    print("hello" <> "world")
-}
